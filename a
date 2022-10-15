@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    double a, b, h, y, x;
+    printf(" a = "); scanf("%lf", &a);
+    printf(" b = "); scanf("%lf", &b);
+    printf(" h = "); scanf("%lf", &h);
+    for (x = a; x <= b; x += h)
+    {
+        if (x < 3)
+            y = log10(pow(x,3));
+        else if (x < 4.5)
+            y = 1/abs(sin(x));
+        else if (x <= 4)
+            y = 1/cos(1/x);
+        printf(" x=%lf\t y=%lf\n", x, y);
+    }
+    return 0;
+}
